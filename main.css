@@ -22,7 +22,7 @@
   #player2 {
     width: 40px;
     height: 40px;
-    background-image: url('img/face.png');
+    background-image: url('img/player2/face.png');
     background-size: 100%;
     background-position: center;
     position:absolute;

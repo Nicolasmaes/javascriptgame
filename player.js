@@ -57,36 +57,36 @@ var playerWalk2 = 0;
 });
 
 document.addEventListener('keydown', function(event) {
-    if (event.code == 'Numpad8') {
+    if (event.code == 'KeyW') {
       playerWalk2 = playerWalk2 + 1;
       if (playerWalk2 % 2 == 1) {
-      player2.style.backgroundImage = "url('img/dos.png')";
+      player2.style.backgroundImage = "url('img/player2/dos.png')";
       }else{
-      player2.style.backgroundImage = "url('img/dos2.png')";
+      player2.style.backgroundImage = "url('img/player2/dos2.png')";
       }
     player2.style.top = (player2.offsetTop - moveSize) + "px";
-  } else if (event.code == 'Numpad6') {
+  } else if (event.code == 'KeyD') {
     playerWalk2 = playerWalk2 + 1;
       if (playerWalk % 2 == 1) {
-      player2.style.backgroundImage = "url('img/droite.png')";
+      player2.style.backgroundImage = "url('img/player2/droite.png')";
       }else{
-      player2.style.backgroundImage = "url('img/droite2.png')";
+      player2.style.backgroundImage = "url('img/player2/droite2.png')";
       }
     player2.style.left = (player2.offsetLeft + moveSize) + "px";
-  } else if (event.code == 'Numpad2') {
+  } else if (event.code == 'KeyS') {
     playerWalk2 = playerWalk2 + 1;
       if (playerWalk % 2 == 1) {
-      player2.style.backgroundImage = "url('img/face.png')";
+      player2.style.backgroundImage = "url('img/player2/face.png')";
       }else{
-      player2.style.backgroundImage = "url('img/face2.png')";
+      player2.style.backgroundImage = "url('img/player2/face2.png')";
       }
       player2.style.top = (player2.offsetTop + moveSize) + "px";
-  } else if (event.code == 'Numpad4') {
+  } else if (event.code == 'KeyA') {
     playerWalk2 = playerWalk2 + 1;
       if (playerWalk2 % 2 == 1) {
-      player2.style.backgroundImage = "url('img/gauche.png')";
+      player2.style.backgroundImage = "url('img/player2/gauche.png')";
       }else{
-      player2.style.backgroundImage = "url('img/gauche2.png')";
+      player2.style.backgroundImage = "url('img/player2/gauche2.png')";
       }
       player2.style.left = (player2.offsetLeft - moveSize) + "px";
       }
