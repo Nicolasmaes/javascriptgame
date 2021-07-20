@@ -5,8 +5,6 @@ var playerWalk = 0;
 var playerWalk2 = 0;
 
   document.addEventListener('keydown', function(event) {
-  console.log(player.offsetLeft);
-/*   console.log(player.offsetTop); */
     if (event.code == 'ArrowUp') {
       playerWalk = playerWalk + 1;
       if (player.offsetTop<10) {
