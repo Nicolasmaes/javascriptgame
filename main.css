@@ -19,7 +19,7 @@
     left: 50%;
     z-index: 2;
   }
-  #player2 {
+  #player2{
     width: 40px;
     height: 40px;
     background-image: url('img/player2/face.png');
@@ -38,5 +38,12 @@
     background-image: url('img/football.png');
     background-size: 100% 100%;
     border-radius: 50%;
+  }
+  .enemies{
+    width: 40px;
+    height: 40px;
+    background-image: url('img/racaillou/geodude-cry-right.png');
+    background-size: 100%;
+    background-position: center;
   }
   
