@@ -1,4 +1,5 @@
 addEnemies();
+
 function addEnemies(){
     for (let i = 0; i < 5; i++) {   
         let div = document.createElement('div');  
@@ -9,15 +10,15 @@ function addEnemies(){
     }
 }
 function getRandomPosition(){
-    let randomX = Math.floor(Math.random()*24);
-    let randomY = Math.floor(Math.random()*24);
+    let randomX = Math.floor(Math.random()*780);
+    let randomY = Math.floor(Math.random()*580);
     return [randomX,randomY];
 }
 
 function positionEnemies(enemy){
     let randomPosition=getRandomPosition();
-    let x=randomPosition[0]*24;
-    let y=randomPosition[1]*24;
+    let x=randomPosition[0];
+    let y=randomPosition[1];
     enemy.style.top= x+'px';
     enemy.style.left= y+'px';
 }

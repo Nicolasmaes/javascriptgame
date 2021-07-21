@@ -1,0 +1,50 @@
+#gameContainer {
+    width: 600px;
+    height: 800px;
+    margin: 0 auto;
+    background-image: url('img/footballfield.jpg');
+    background-size: 100% 100%;
+    position:relative;
+    overflow: hidden;
+  }
+  
+  #player {
+    width: 40px;
+    height: 40px;
+    background-image: url('img/face.png');
+    background-size: 100%;
+    background-position: center;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+  }
+  #player2{
+    width: 40px;
+    height: 40px;
+    background-image: url('img/player2/face.png');
+    background-size: 100%;
+    background-position: center;
+    position:absolute;
+    top: 40%;
+    left: 80%;
+    z-index: 2;
+  }
+  #bomb{
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('img/football.png');
+    background-size: 100% 100%;
+    border-radius: 50%;
+  }
+  .enemies{
+    width: 40px;
+    height: 40px;
+    background-image: url('img/racaillou/geodude-cry-right.png');
+    background-size: 100%;
+    background-position: center;
+    position: absolute;
+  }
+  
