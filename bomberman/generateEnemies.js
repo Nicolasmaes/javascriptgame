@@ -10,15 +10,32 @@ function addEnemies(){
     }
 }
 function getRandomPosition(){
-    let randomX = Math.floor(Math.random()*780);
-    let randomY = Math.floor(Math.random()*580);
+    let randomX = Math.floor(Math.random()*24);
+    let randomY = Math.floor(Math.random()*24);
     return [randomX,randomY];
 }
 
 function positionEnemies(enemy){
     let randomPosition=getRandomPosition();
-    let x=randomPosition[0];
-    let y=randomPosition[1];
+    let x=randomPosition[0]*24;
+    let y=randomPosition[1]*24;
     enemy.style.top= x+'px';
     enemy.style.left= y+'px';
+}
+
+const enemies = document.getElementsByClassName('enemies');
+
+colisionDetect(player.offsetLeft, player.offsetTop, enemies [0]);
+
+function colisionDetect(x, y, enemy){
+
+    if ((y < enemy.offsetTop + enemy.offsetHeight &&
+        y + player.offsetHeight > enemy.offsetTop) &&
+        (x < enemy.offsetLeft + enemy.offsetWidth &&
+        x + player.offsetWidth > enemy.offsetLeft)) {
+            console.log('boom'); 
+        return true;} 
+    else {
+        return false}
+          
 }

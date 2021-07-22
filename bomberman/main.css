@@ -15,9 +15,7 @@
     background-size: 100%;
     background-position: center;
     position:absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
+    z-index: 11;
   }
   #player2{
     width: 40px;
@@ -38,6 +36,7 @@
     background-image: url('img/football.png');
     background-size: 100% 100%;
     border-radius: 50%;
+    z-index: 1;
   }
   .enemies{
     width: 40px;
@@ -46,5 +45,5 @@
     background-size: 100%;
     background-position: center;
     position: absolute;
+    z-index: 10;
   }
-  

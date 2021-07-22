@@ -1,11 +1,16 @@
 const player = document.getElementById('player');
 const player2 = document.getElementById('player2');
-const moveSize = 20;
+const moveSize =24;
 var playerWalk = 0;
 var playerWalk2 = 0;
 
+
+
   document.addEventListener('keydown', function(event) {
     if (event.code == 'ArrowUp') {
+      if(player.offsetTop >=0 && !colisionDetect (player.offsetLeft, player.offsetTop - moveSize, enemies [0])){ 
+        console.log('boom');}
+        else{
       playerWalk = playerWalk + 1;
       if (player.offsetTop<10) {
       } else {
@@ -16,6 +21,7 @@ var playerWalk2 = 0;
           }
         player.style.top = (player.offsetTop - moveSize) + "px";
       }
+    }
   } else if (event.code == 'ArrowRight') {
     playerWalk = playerWalk + 1;
     if (player.offsetLeft>550) {
@@ -52,6 +58,8 @@ var playerWalk2 = 0;
         player.style.left = (player.offsetLeft - moveSize) + "px";
         }
     }
+    console.log(player.offsetTop);
+    console.log(player.offsetLeft);
 });
 
 document.addEventListener('keydown', function(event) {
