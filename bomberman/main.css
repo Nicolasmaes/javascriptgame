@@ -24,8 +24,6 @@
     background-size: 100%;
     background-position: center;
     position:absolute;
-    top: 40%;
-    left: 80%;
     z-index: 2;
   }
   #bomb{

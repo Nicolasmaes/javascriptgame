@@ -7,20 +7,16 @@ var playerWalk2 = 0;
 
 
   document.addEventListener('keydown', function(event) {
-    if (event.code == 'ArrowUp') {
-      if(player.offsetTop >=0 && !colisionDetect (player.offsetLeft, player.offsetTop - moveSize, enemies [0])){ 
-        console.log('boom');}
-        else{
-      playerWalk = playerWalk + 1;
-      if (player.offsetTop<10) {
-      } else {
-        if (playerWalk % 2 == 1) {
-          player.style.backgroundImage = "url('img/dos.png')";
-          }else{
-          player.style.backgroundImage = "url('img/dos2.png')";
-          }
-        player.style.top = (player.offsetTop - moveSize) + "px";
-      }
+  if (event.code == 'ArrowUp') {
+    playerWalk = playerWalk + 1;
+    if (player.offsetLeft<10) {
+    } else {
+      if (playerWalk % 2 == 1) {
+        player.style.backgroundImage = "url('img/dos.png')";
+        }else{
+        player.style.backgroundImage = "url('img/dos2.png')";
+        }
+      player.style.top = (player.offsetTop - moveSize) + "px";
     }
   } else if (event.code == 'ArrowRight') {
     playerWalk = playerWalk + 1;

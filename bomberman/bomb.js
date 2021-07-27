@@ -1,9 +1,9 @@
 let bomb = document.getElementById('bomb');
-let enemy_0 = document.getElementById('enemy-0');
+/* let enemy_0 = document.getElementById('enemy-0');
 let enemy_1 = document.getElementById('enemy-1');
 let enemy_2 = document.getElementById('enemy-2');
 let enemy_3 = document.getElementById('enemy-3');
-let enemy_4 = document.getElementById('enemy-4');
+let enemy_4 = document.getElementById('enemy-4'); */
 console.log(enemy_0.offsetTop);
 console.log(enemy_0.offsetLeft);
 
@@ -22,40 +22,27 @@ document.addEventListener('keydown', function(event){
         setTimeout (()=>bomb.style.backgroundImage = "url('img/explosion/explode8.png')", 1900);
         setTimeout (()=>bomb.style.display = 'none', 2000);
         bomb.style.backgroundImage = "url('img/football.png')";
-        if(enemy_0.offsetTop - enemy_0.style.height < bomb.offsetTop < enemy_0.offsetTop + enemy_0.style.height &&
-            enemy_0.offsetLeft - enemy_0.style.width < bomb.offsetLeft < enemy_0.offsetLeft + enemy_0.style.width){
-                setTimeout (()=>enemy_0.style.display = 'none', 2001);
+
+        for (let i = 0; i < 5; i++) {
+         
+            console.log(enemies[i]);
+            if(enemies[i].offsetTop >= bomb.offsetTop -24 && enemies[i].offsetTop <= bomb.offsetTop +24 &&
+                enemies[i].offsetLeft >= bomb.offsetLeft -24 && enemies[i].offsetLeft <= bomb.offsetLeft +24){
+                    setTimeout (()=>enemies[i].style.display="none",2001);
+                
+            }
+            
         }
-/*         if(enemy_1.offsetTop - 48 < bomb.offsetTop < enemy_1.offsetTop + 48 &&
-            enemy_1.offsetLeft - 48 < bomb.offsetLeft < enemy_1.offsetLeft + 48
-            ){
-            enemy_1.style.display='none';
-        }
-        if(enemy_2.offsetTop - 48 < bomb.offsetTop < enemy_2.offsetTop + 48 &&
-            enemy_2.offsetLeft - 48 < bomb.offsetLeft < enemy_2.offsetLeft + 48
-            ){
-            enemy_2.style.display='none';
-        }
-        if(enemy_3.offsetTop - 48 < bomb.offsetTop < enemy_3.offsetTop + 48 &&
-            enemy_3.offsetLeft - 48 < bomb.offsetLeft < enemy_3.offsetLeft + 48
-            ){
-            enemy_3.style.display='none';
-        }
-        if(enemy_4.offsetTop - 48 < bomb.offsetTop < enemy_4.offsetTop + 48 &&
-            enemy_4.offsetLeft - 48 < bomb.offsetLeft < enemy_4.offsetLeft + 48
-            ){
-            enemy_4.style.display='none';
-        } */
     }
 });
 
 
-const doomGuy = document.getElementById('player');
+/* const doomGuy = document.getElementById('player');
 const enemies = document.getElementsByClassName('enemies');
 colisionDetect(doomGuy.offsetLeft, doomGuy.offsetTop, enemies [0]);
 function colisionDetect(x, y, enemy){
-
-    if ((y < enemy.offsetTop + enemy.offsetHeight &&
+ */
+/*     if ((y < enemy.offsetTop + enemy.offsetHeight &&
         y + doomGuy.offsetHeight > enemy.offsetTop) &&
         (x < enemy.offsetLeft + enemy.offsetWidth &&
         x + doomGuy.offsetWidth > enemy.offsetLeft)) {
@@ -65,7 +52,7 @@ function colisionDetect(x, y, enemy){
     else {
         return false}
           
-}
+} */
 
 /* document.addEventListener('keydown', function(event) {
     console.log(player.style.top);
